@@ -47,7 +47,7 @@ const ContactPage = () => {
           className="flex flex-col w-full mb-12 text-center"
         >
           <h1 className="mb-4 text-2xl font-medium text-gray-900 sm:text-3xl title-font">
-            Contact Us
+            Contact Me
           </h1>
           <p className="mx-auto text-base leading-relaxed lg:w-2/3">
             Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical
@@ -82,7 +82,7 @@ const ContactPage = () => {
               </button>
             </div>
             <div className="w-full p-2 pt-8 mt-8 text-center border-t border-gray-200">
-              <a className="text-red-500">example@email.com</a>
+              <a className="text-red-500">logan@email.com</a>
               <p className="my-5 leading-normal">
                 49 Smith St.
                 <br />

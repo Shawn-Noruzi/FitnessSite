@@ -1,56 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const productsDb = [
-  {
-    name: "The Catalyzer",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 16.0,
-  },
-  {
-    name: "Shooting Stars",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 21.15,
-  },
-  {
-    name: "Neptune",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 12.0,
-  },
-  {
-    name: "The 400 Blows",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 18.4,
-  },
-  {
-    name: "The Catalyzer",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 16.0,
-  },
-  {
-    name: "Shooting Stars",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 21.15,
-  },
-  {
-    name: "Neptune",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 12.0,
-  },
-  {
-    name: "The 400 Blows",
-    category: "CATEGORY",
-    img: "https://dummyimage.com/420x260",
-    price: 18.4,
-  },
-];
 
 const content = (isFirstMount) => ({
   animate: {
@@ -70,17 +20,17 @@ const title = {
   },
 };
 
-const products = {
-  initial: { y: -20, opacity: 0 },
-  animate: {
-    y: 0,
-    opacity: 1,
-    transition: {
-      duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99],
-    },
-  },
-};
+// const products = {
+//   initial: { y: -20, opacity: 0 },
+//   animate: {
+//     y: 0,
+//     opacity: 1,
+//     transition: {
+//       duration: 0.7,
+//       ease: [0.6, -0.05, 0.01, 0.99],
+//     },
+//   },
+// };
 
 export default function IndexPage({ isFirstMount }) {
   return (
@@ -94,10 +44,10 @@ export default function IndexPage({ isFirstMount }) {
         className="space-y-12"
       >
         <motion.h1 variants={title} className="text-6xl font-black text-center">
-          Welcome to tailstore!
+          Logan Wong
         </motion.h1>
 
-        <motion.section variants={products} className="text-gray-700 body-font">
+        {/* <motion.section variants={products} className="text-gray-700 body-font">
           <div className="container px-5 pt-12 mx-auto">
             <div className="flex flex-wrap -m-4">
               {productsDb.map((product, index) => (
@@ -105,30 +55,30 @@ export default function IndexPage({ isFirstMount }) {
               ))}
             </div>
           </div>
-        </motion.section>
+        </motion.section> */}
       </motion.div>
     </motion.section>
   );
 }
 
-const Product = ({ img, category, name, price }) => (
-  <div className="w-full p-4 lg:w-1/4 md:w-1/2">
-    <a className="relative block h-48 overflow-hidden rounded">
-      <img
-        alt="ecommerce"
-        className="block object-cover object-center w-full h-full"
-        src={img}
-      />
-    </a>
-    <div className="mt-4">
-      <h3 className="mb-1 text-xs tracking-widest text-gray-500 title-font">
-        {category}
-      </h3>
-      <h2 className="text-lg font-medium text-gray-900 title-font">{name} </h2>
-      <p className="mt-1">${price.toFixed(2)}</p>
-    </div>
-  </div>
-);
+// const Product = ({ img, category, name, price }) => (
+//   <div className="w-full p-4 lg:w-1/4 md:w-1/2">
+//     <a className="relative block h-48 overflow-hidden rounded">
+//       <img
+//         alt="ecommerce"
+//         className="block object-cover object-center w-full h-full"
+//         src={img}
+//       />
+//     </a>
+//     <div className="mt-4">
+//       <h3 className="mb-1 text-xs tracking-widest text-gray-500 title-font">
+//         {category}
+//       </h3>
+//       <h2 className="text-lg font-medium text-gray-900 title-font">{name} </h2>
+//       <p className="mt-1">${price.toFixed(2)}</p>
+//     </div>
+//   </div>
+// );
 
 const blackBox = {
   initial: {
@@ -192,7 +142,7 @@ const InitialTransition = () => {
         <pattern
           id="pattern"
           patternUnits="userSpaceOnUse"
-          width={750}
+          width={1500}
           height={800}
           className="text-white"
         >
@@ -206,10 +156,10 @@ const InitialTransition = () => {
           className="text-4xl font-bold"
           textAnchor="middle"
           x="50%"
-          y="50%"
+          y="40%"
           style={{ fill: "url(#pattern)" }}
         >
-          tailstore
+          Logan Wong 
         </text>
       </motion.svg>
     </motion.div>
