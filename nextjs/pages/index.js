@@ -42,9 +42,7 @@ export default function IndexPage({ isFirstMount }) {
         variants={content(isFirstMount)}
         className="space-y-12"
       >
-        <motion.h1 variants={title} className="text-6xl font-black text-center">
-          Logan Wong
-        </motion.h1>
+
 
         {/* <motion.section variants={products} className="text-gray-700 body-font">
           <div className="container px-5 pt-12 mx-auto">
@@ -154,8 +152,9 @@ const InitialTransition = () => {
             className="w-full h-full text-gray-600 fill-current"
           />
         </pattern>
+
         <text
-          className="text-4xl font-bold"
+          className="text-4xl font-bold font-zygoregular"
           textAnchor="middle"
           x="50%"
           y="75%"
@@ -165,7 +164,7 @@ const InitialTransition = () => {
         </text>
 
         <text
-          className="text-4xl font-bold"
+          className="text-4xl font-bold font-zygoregular"
           textAnchor="middle"
           x="50%"
           y="45%"
@@ -175,7 +174,7 @@ const InitialTransition = () => {
         </text>
 
         <text
-          className="text-4xl font-bold"
+          className="text-4xl font-bold font-zygoregular"
           textAnchor="middle"
           x="50%"
           y="20%"

@@ -1,63 +1,40 @@
 import React from "react";
-
+import { Menu } from "./Menu";
 import Link from "next/link";
-import { useRouter } from "next/router";
 
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col ">
       <Header />
-      <main className="flex-1">{children}</main>
+      {children}
       <Footer />
     </div>
   );
 };
 
 const Header = () => {
-  const { asPath } = useRouter();
-
   return (
     <header className="text-gray-700 body-font">
-      <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row">
+      <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row ">
         <Link href="/">
-          <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              className="w-10 h-10 p-2 text-white bg-red-500 rounded-full"
-              viewBox="0 0 24 24"
-            >
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path>
-            </svg>
-            <span className="ml-3 text-xl">Logan Wong -- Fitness Coach</span>
-          </a>
+          <div className="flex w-1/4">
+            <img src="/images/Logo.webp" />
+            <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0 ">
+              <span className="ml-3 text-xl font-zygoregular text-white">
+                LW | FITNESS
+              </span>
+            </a>
+          </div>
         </Link>
-        <nav className="flex flex-wrap items-center justify-center space-x-4 text-base md:ml-auto">
-          <Link href="/">
-            <a
-              className={`hover:text-gray-900 ${
-                asPath === "/" ? "font-black text-black" : ""
-              }`}
-            >
-              Home
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a
-              className={
-                asPath === "/contact"
-                  ? "font-black text-black"
-                  : "hover:text-gray-900"
-              }
-            >
-              Contact Us
-            </a>
-          </Link>
-        </nav>
+        <div className="flex justify-center w-3/6">
+          <a className="flex items-center mb-4 font-medium  title-font md:mb-0">
+            <span className="ml-3 text-xl font-zygoregular text-white opacity-75">
+              LOGAN WONG
+            </span>
+          </a>
+        </div>
+
+        <Menu />
       </div>
     </header>
   );
@@ -138,16 +115,6 @@ const Footer = () => (
       </div>
     </div>
   </footer>
-);
-
-const Links = ({ names }) => (
-  <nav className="mb-10 list-none">
-    {names.map((name) => (
-      <li key={name}>
-        <a className="text-gray-600 hover:text-gray-800">{name}</a>
-      </li>
-    ))}
-  </nav>
 );
 
 export default Layout;
