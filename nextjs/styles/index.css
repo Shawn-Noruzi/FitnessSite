@@ -15,16 +15,19 @@ nav {
 
 .background {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 0;
   bottom: 0;
-  width: 100%;
+  width: 106%;
   background: #000;
   border-bottom: 2px solid white;
   border-left: 2px solid white;
 }
-
-button {
+.isClosed {
+  z-index: 0;
+}
+.menuButton {
   outline: none;
   border: none;
   -webkit-user-select: none;
@@ -32,6 +35,7 @@ button {
   -ms-user-select: none;
   cursor: pointer;
   position: absolute;
+  z-index: 1;
   top: 25px;
   left: 28px;
   width: 50px;
@@ -52,6 +56,7 @@ li {
 ul {
   padding: 25px;
   position: absolute;
+  z-index: 1;
   top: 100px;
   width: 149px;
 }
@@ -113,4 +118,23 @@ li {
   font-weight: normal;
   font-style: normal;
   font-display: block;
+}
+
+.fitnessText {
+  font-size: 92px;
+}
+
+.headerContentContainer {
+  margin-top: 150px;
+  position: relative;
+}
+
+.headerTextContainer {
+  margin-top: -54px;
+  position: absolute;
+  right: 0;
+}
+
+.silverTextColor {
+  color: #acacac;
 }

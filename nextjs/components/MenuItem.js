@@ -21,7 +21,7 @@ const variants = {
 
 const colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"];
 
-export const MenuItem = ({ i }) => {
+export const MenuItem = ({ i, toggle }) => {
   const style = { border: `2px solid ${colors[i.number]}` };
 
   return (
@@ -32,7 +32,9 @@ export const MenuItem = ({ i }) => {
     >
       <div className="text-placeholder" style={style}>
         <Link href={i.href}>
-          <a className="menuLink">{i.linkName}</a>
+          <a onClick={toggle} className={"menuLink"}>
+            {i.linkName}
+          </a>
         </Link>
       </div>
     </motion.li>

@@ -32,13 +32,14 @@ export const Menu = () => {
 
   return (
     <motion.nav
+    className={"mr-6"}
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <Navigation isOpen={isOpen} toggle={() => toggleOpen()} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
 

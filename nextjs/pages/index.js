@@ -7,29 +7,21 @@ const content = (isFirstMount) => ({
   },
 });
 
-const title = {
-  initial: { y: -20, opacity: 0 },
-  animate: {
-    y: 0,
+const headerText = {
+  visible: {
     opacity: 1,
     transition: {
-      duration: 0.7,
-      ease: [0.6, -0.05, 0.01, 0.99],
+      when: "beforeChildren",
+      staggerChildren: 0.3,
+    },
+  },
+  hidden: {
+    opacity: 0,
+    transition: {
+      when: "afterChildren",
     },
   },
 };
-
-// const products = {
-//   initial: { y: -20, opacity: 0 },
-//   animate: {
-//     y: 0,
-//     opacity: 1,
-//     transition: {
-//       duration: 0.7,
-//       ease: [0.6, -0.05, 0.01, 0.99],
-//     },
-//   },
-// };
 
 export default function IndexPage({ isFirstMount }) {
   return (
@@ -40,42 +32,29 @@ export default function IndexPage({ isFirstMount }) {
         initial="initial"
         animate="animate"
         variants={content(isFirstMount)}
-        className="space-y-12"
+        className=" flex justify-center"
       >
-
-
-        {/* <motion.section variants={products} className="text-gray-700 body-font">
-          <div className="container px-5 pt-12 mx-auto">
-            <div className="flex flex-wrap -m-4">
-              {productsDb.map((product, index) => (
-                <Product key={index} {...product} />
-              ))}
-            </div>
+        <img src="/images/muscular-man.jpg" className="headerImage" />
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={headerText}
+          className="headerContentContainer "
+        >
+          <p className="font-zygoregular silverTextColor fitnessText">
+            FITNESS
+          </p>
+          <div className="flex headerTextContainer">
+            <p className="font-zygoregular silverTextColor text-5xl mr-0.5">
+              WITH
+            </p>
+            <p className="font-zygoregular text-5xl text-yellow-400">LOGAN</p>
           </div>
-        </motion.section> */}
+        </motion.div>
       </motion.div>
     </motion.section>
   );
 }
-
-// const Product = ({ img, category, name, price }) => (
-//   <div className="w-full p-4 lg:w-1/4 md:w-1/2">
-//     <a className="relative block h-48 overflow-hidden rounded">
-//       <img
-//         alt="ecommerce"
-//         className="block object-cover object-center w-full h-full"
-//         src={img}
-//       />
-//     </a>
-//     <div className="mt-4">
-//       <h3 className="mb-1 text-xs tracking-widest text-gray-500 title-font">
-//         {category}
-//       </h3>
-//       <h2 className="text-lg font-medium text-gray-900 title-font">{name} </h2>
-//       <p className="mt-1">${price.toFixed(2)}</p>
-//     </div>
-//   </div>
-// );
 
 const blackBox = {
   initial: {

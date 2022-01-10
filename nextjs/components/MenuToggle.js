@@ -12,7 +12,7 @@ const Path = (props) => (
 );
 
 export const MenuToggle = ({ toggle }) => (
-  <button onClick={toggle}>
+  <button className="menuButton" onClick={toggle}>
     <div className="flex ">
       <p className="text-xl font-zygoregular text-white mr-2">MENU</p>
       <div className="mt-1">

@@ -5,16 +5,25 @@ import { MenuItem } from "./MenuItem";
 const variants = {
   open: {
     transition: { staggerChildren: 0.07, delayChildren: 0.2 },
+    zIndex: 1,
   },
   closed: {
     transition: { staggerChildren: 0.05, staggerDirection: -1 },
+    zIndex: 0,
   },
 };
 
-export const Navigation = () => (
+export const Navigation = ({ toggle, isOpen }) => (
   <motion.ul variants={variants}>
     {itemIds.map((i) => (
-      <MenuItem i={i} key={i} linkName={i.linkName} href={i.href} />
+      <MenuItem
+        isOpen={isOpen}
+        toggle={toggle}
+        i={i}
+        key={i}
+        linkName={i.linkName}
+        href={i.href}
+      />
     ))}
   </motion.ul>
 );

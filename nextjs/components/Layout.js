@@ -28,7 +28,7 @@ const Header = () => {
         </Link>
         <div className="flex justify-center w-3/6">
           <a className="flex items-center mb-4 font-medium  title-font md:mb-0">
-            <span className="ml-3 text-xl font-zygoregular text-white opacity-75">
+            <span className="ml-3 text-xl font-zygoregular silverTextColor">
               LOGAN WONG
             </span>
           </a>
