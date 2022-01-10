@@ -9,6 +9,7 @@ const variants = {
     transition: {
       y: { stiffness: 1000, velocity: -100 },
     },
+
   },
   closed: {
     y: 50,
@@ -16,6 +17,7 @@ const variants = {
     transition: {
       y: { stiffness: 1000 },
     },
+ 
   },
 };
 

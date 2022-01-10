@@ -124,17 +124,32 @@ li {
   font-size: 92px;
 }
 
+.inspirationalText {
+  font-size: 18px;
+  width: 399px;
+  margin-left: auto;
+  margin-right: 28%;
+}
 .headerContentContainer {
   margin-top: 150px;
   position: relative;
+  width: 50%;
 }
 
 .headerTextContainer {
   margin-top: -54px;
-  position: absolute;
-  right: 0;
+  margin-left: auto;
 }
 
 .silverTextColor {
   color: #acacac;
+}
+
+.w-fit {
+  width: fit-content;
+}
+
+.headerImage {
+  width: 50%;
+  object-fit: cover;
 }
