@@ -14,7 +14,7 @@ const Path = (props) => (
 export const MenuToggle = ({ toggle }) => (
   <button className="menuButton" onClick={toggle}>
     <div className="flex ">
-      <p className="text-xl font-zygoregular text-white mr-2">MENU</p>
+      <p className="text-xl font-zygoregular text-white mr-2 menu">MENU</p>
       <div className="mt-1">
         <svg width="23" height="23" viewBox="0 0 23 23">
           <Path

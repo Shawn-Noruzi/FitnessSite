@@ -15,7 +15,6 @@ const variants = {
   },
 };
 
-const onAnimationComplete = () => {};
 
 export const Navigation = ({ toggle, isOpen }) => (
   <motion.ul

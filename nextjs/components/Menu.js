@@ -32,7 +32,7 @@ export const Menu = () => {
 
   return (
     <motion.nav
-    className={"mr-6"}
+    
       initial={false}
       animate={isOpen ? "open" : "closed"}
       custom={height}

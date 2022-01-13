@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { InitialTransition } from "../components/InitialTransition";
+import useWindowDimensions from "./../utility/useWindowDimensions";
 
 const content = (isFirstMount) => ({
   animate: {
@@ -24,6 +25,7 @@ const fitnessText = {
 };
 
 export default function IndexPage({ isFirstMount }) {
+  const { width, height } = useWindowDimensions();
   return (
     <motion.section exit={{ opacity: 0 }}>
       {isFirstMount && <InitialTransition />}
@@ -32,7 +34,7 @@ export default function IndexPage({ isFirstMount }) {
         initial="initial"
         animate="animate"
         variants={content(isFirstMount)}
-        className=" flex justify-center"
+        className=" flex flex-column justify-center containerHeader"
       >
         <img
           alt="muscular man"
@@ -75,9 +77,7 @@ export default function IndexPage({ isFirstMount }) {
             variants={fitnessText}
             className="font-zygoregular silverTextColor inspirationalText"
           >
-            Be with people who inspire you
-            <br />
-            to become better.
+            Be with people who inspire you to become better.
           </motion.p>
         </motion.div>
       </motion.div>

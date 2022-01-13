@@ -1,7 +1,6 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
 body {
   background: #000;
 }
@@ -122,6 +121,7 @@ li {
 
 .fitnessText {
   font-size: 92px;
+  margin-bottom: 5px;
 }
 
 .inspirationalText {
@@ -133,7 +133,8 @@ li {
 .headerContentContainer {
   margin-top: 150px;
   position: relative;
-  width: 50%;
+  width: 40%;
+  margin-right: 10%;
 }
 
 .headerTextContainer {
@@ -152,4 +153,38 @@ li {
 .headerImage {
   width: 50%;
   object-fit: cover;
+}
+
+@media only screen and (max-width: 960px) {
+  .fitnessText {
+    font-size: 75px;
+    margin-bottom: 10px;
+  }
+  .inspirationalText {
+    width: unset;
+    margin-left: unset;
+    margin-right: unset;
+  }
+  .containerHeader {
+    flex-direction: column;
+  }
+  .LWFitnessText {
+  }
+}
+
+@media only screen and (max-width: 550px) {
+  .LWFitnessText {
+    font-size: 14px;
+    letter-spacing: 1px;
+    margin-left: 0px;
+  }
+
+  .menu {
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+  }
+  .title-font {
+    margin-bottom: 0;
+  }
 }

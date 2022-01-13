@@ -1,7 +1,7 @@
 import React from "react";
 import { Menu } from "./Menu";
 import Link from "next/link";
-
+import useWindowDimensions from "./../utility/useWindowDimensions";
 const Layout = ({ children }) => {
   return (
     <div className="flex flex-col ">
@@ -13,26 +13,30 @@ const Layout = ({ children }) => {
 };
 
 const Header = () => {
+  const { width, height } = useWindowDimensions();
+  console.log("width", width);
   return (
     <header className="text-gray-700 body-font">
-      <div className="container flex flex-col flex-wrap items-center p-5 mx-auto md:flex-row ">
+      <div className="container flex flex-col flex-wrap p-5 mx-auto md:flex-row md:items-center">
         <Link href="/">
-          <div className="flex w-1/4">
+          <div className="flex md:w-1/4">
             <img src="/images/Logo.webp" />
-            <a className="flex items-center mb-4 font-medium text-gray-900 title-font md:mb-0 ">
-              <span className="ml-3 text-xl font-zygoregular text-white">
+            <a className="flex items-center mb-4 font-medium text-gray-900 title-font  ">
+              <span className="ml-3 text-xl font-zygoregular text-white LWFitnessText">
                 LW | FITNESS
               </span>
             </a>
           </div>
         </Link>
-        <div className="flex justify-center w-3/6">
-          <a className="flex items-center mb-4 font-medium  title-font md:mb-0">
-            <span className="ml-3 text-xl font-zygoregular silverTextColor">
-              LOGAN WONG
-            </span>
-          </a>
-        </div>
+        {width > 960 ? (
+          <div className="flex justify-center w-3/6">
+            <a className="flex items-center mb-4 font-medium title-font ">
+              <span className="ml-3 text-xl font-zygoregular silverTextColor ">
+                LOGAN WONG
+              </span>
+            </a>
+          </div>
+        ) : null}
 
         <Menu />
       </div>
