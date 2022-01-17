@@ -21,6 +21,7 @@ export const Navigation = ({ toggle, isOpen }) => (
     id="ulSelect"
     animate={isOpen ? "open" : "closed"}
     variants={variants}
+    className={"menuLinkContainer"}
     onAnimationComplete={() => {
       if (isOpen === false) {
         document.getElementById("ulSelect").style.zIndex = "-1";

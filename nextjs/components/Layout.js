@@ -14,13 +14,12 @@ const Layout = ({ children }) => {
 
 const Header = () => {
   const { width, height } = useWindowDimensions();
-  console.log("width", width);
   return (
     <header className="text-gray-700 body-font">
-      <div className="container flex flex-col flex-wrap p-5 mx-auto md:flex-row md:items-center">
+      <div className="navbar">
         <Link href="/">
-          <div className="flex md:w-1/4">
-            <img src="/images/Logo.webp" />
+          <div className="flex lwContainer">
+            <img className="logo" src="/images/Logo.webp" />
             <a className="flex items-center mb-4 font-medium text-gray-900 title-font  ">
               <span className="ml-3 text-xl font-zygoregular text-white LWFitnessText">
                 LW | FITNESS
@@ -29,7 +28,7 @@ const Header = () => {
           </div>
         </Link>
         {width > 960 ? (
-          <div className="flex justify-center w-3/6">
+          <div className="flex justify-center centeredLoganTitle">
             <a className="flex items-center mb-4 font-medium title-font ">
               <span className="ml-3 text-xl font-zygoregular silverTextColor ">
                 LOGAN WONG
