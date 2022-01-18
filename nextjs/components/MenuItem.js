@@ -9,7 +9,6 @@ const variants = {
     transition: {
       y: { stiffness: 1000, velocity: -100 },
     },
-
   },
   closed: {
     y: 50,
@@ -17,28 +16,23 @@ const variants = {
     transition: {
       y: { stiffness: 1000 },
     },
- 
   },
 };
 
 const colors = ["#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF", "#FFFFFF"];
 
 export const MenuItem = ({ i, toggle }) => {
-  const style = { border: `2px solid ${colors[i.number]}` };
-
   return (
     <motion.li
       variants={variants}
       whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
-      <div className="text-placeholder" style={style}>
-        <Link href={i.href}>
-          <a onClick={toggle} className={"menuLink"}>
-            {i.linkName}
-          </a>
-        </Link>
-      </div>
+      <Link href={i.href}>
+        <a onClick={toggle} className={"menuLink"}>
+          {i.linkName}
+        </a>
+      </Link>
     </motion.li>
   );
 };
