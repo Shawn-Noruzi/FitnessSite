@@ -60,25 +60,24 @@ export default function IndexPage({ isFirstMount }) {
             >
               <motion.p
                 variants={fitnessText}
-                className="font-zygoregular silverTextColor text-5xl mr-0.5"
+                className="font-zygoregular silverTextColor text-5xl mr-0.5 withLoganText"
               >
                 WITH
               </motion.p>
               <motion.p
                 variants={fitnessText}
-                className="font-zygoregular text-5xl text-yellow-400"
+                className="font-zygoregular text-5xl text-yellow-400 withLoganText"
               >
                 LOGAN
               </motion.p>
             </motion.div>
+            <motion.p
+              variants={fitnessText}
+              className="font-zygoregular silverTextColor inspirationalText"
+            >
+              Be with people who inspire you to become better.
+            </motion.p>
           </motion.div>
-
-          <motion.p
-            variants={fitnessText}
-            className="font-zygoregular silverTextColor inspirationalText"
-          >
-            Be with people who inspire you to become better.
-          </motion.p>
         </motion.div>
       </motion.div>
     </motion.section>

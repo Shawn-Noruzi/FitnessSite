@@ -77,7 +77,7 @@ const blackBox = {
           </pattern>
   
           <text
-            className="text-4xl font-bold font-zygoregular"
+            className="text-4xl font-bold initTransitionText font-zygoregular"
             textAnchor="middle"
             x="50%"
             y="75%"
@@ -97,7 +97,7 @@ const blackBox = {
           </text>
   
           <text
-            className="text-4xl font-bold font-zygoregular"
+            className="text-4xl font-bold initTransitionText font-zygoregular"
             textAnchor="middle"
             x="50%"
             y="20%"

@@ -9,7 +9,7 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 25%;
+  width: 17%;
 }
 
 .background {
@@ -147,18 +147,17 @@ li {
 .inspirationalText {
   font-size: 18px;
   width: 399px;
-
-  margin-right: 28%;
+  margin-left: auto;
 }
+
 .headerContentContainer {
   margin-top: 150px;
   position: relative;
-  width: 40%;
-  margin-right: 10%;
 }
 
 .headerTextContainer {
   margin-top: -54px;
+  margin-left: auto;
 }
 
 .silverTextColor {
@@ -183,16 +182,39 @@ li {
 @media only screen and (max-width: 960px) {
   .inspirationalText {
     width: unset;
-    margin-left: unset;
-    margin-right: unset;
+    width: 70%;
+    font-size: 14px;
+    text-align: end;
+    max-width: 320px;
   }
 
   .containerHeader {
-    flex-direction: column;
+    height: 72vh;
   }
-
+  .fitnessText {
+    font-size: 60px;
+    margin-bottom: 3px;
+    text-align: end;
+  }
+  .withLoganText {
+    font-size: 2rem;
+  }
   nav {
     width: 30%;
+  }
+  .headerImage {
+    position: absolute;
+    width: 100%;
+    height: 72vh;
+    margin-left: -20%;
+    opacity: 0.75;
+  }
+  .headerContentContainer {
+    margin-left: auto;
+    margin-right: 5%;
+  }
+  .headerTextContainer {
+    margin-top: -36px;
   }
 }
 
@@ -202,12 +224,18 @@ li {
 }
 
 @media only screen and (max-width: 550px) {
+  .initTransitionText{
+    font-size:28px;
+    line-height: 1.5rem;
+  }
   .LWFitnessText {
     font-size: 14px;
     letter-spacing: 1px;
     margin-left: 0px;
   }
-
+  .headerImage {
+    opacity: 0.5;
+  }
   .menu {
     font-size: 14px;
     display: flex;
@@ -232,8 +260,18 @@ li {
 }
 
 @media only screen and (max-width: 400px) {
+  .headerImage {
+    margin-left: unset;
+  }
+  .fitnessText {
+    font-size: 50px;
+  }
   .menuButton {
     top: 19px;
     right: 50px;
+  }
+  .inspirationalText {
+    max-width: unset;
+    width: 90%;
   }
 }
