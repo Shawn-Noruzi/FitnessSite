@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { InitialTransition } from "../components/InitialTransition";
+import PreviewVideo from "../components/previewVideo";
 import useWindowDimensions from "./../utility/useWindowDimensions";
 
 const content = (isFirstMount) => ({
@@ -9,16 +10,17 @@ const content = (isFirstMount) => ({
   },
 });
 
-const headerText = {
+const headerText = (isFirstMount) => ({
   hidden: { opacity: 0 },
   show: {
     opacity: 1,
     transition: {
-      delayChildren: 2.9,
+      delayChildren: isFirstMount ? 2.9 : 0,
       staggerDirection: -1,
     },
   },
-};
+});
+
 const fitnessText = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
@@ -44,7 +46,7 @@ export default function IndexPage({ isFirstMount }) {
         <motion.div
           initial="hidden"
           animate="show"
-          variants={headerText}
+          variants={headerText(isFirstMount)}
           className="headerContentContainer "
         >
           <motion.div variants={fitnessText} className="flex flex-col w-fit">
@@ -77,9 +79,24 @@ export default function IndexPage({ isFirstMount }) {
             >
               Be with people who inspire you to become better.
             </motion.p>
+            <motion.div className={"rightArrowContainer"}>
+              <motion.p className="font-zygoregular joinText">
+                Join Today
+              </motion.p>
+              <motion.div className="crescentMoonContainer">
+                <motion.img
+                  className="rightArrowIcon"
+                  src={"/images/rightArrow.png"}
+                  initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
+                />
+              </motion.div>
+            </motion.div>
           </motion.div>
         </motion.div>
       </motion.div>
+      <PreviewVideo width={width} />
     </motion.section>
   );
 }
