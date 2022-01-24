@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { InitialTransition } from "../components/InitialTransition";
-import PreviewVideo from "../components/previewVideo";
+import PreviewVideo from "../components/PreviewVideo";
 import useWindowDimensions from "./../utility/useWindowDimensions";
 
 const content = (isFirstMount) => ({
