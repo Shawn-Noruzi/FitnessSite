@@ -55,7 +55,7 @@ export default function PreviewVideo({ width }) {
             : styles.videoContainer
         }
       >
-        <div
+        <motion.div
           className={
             videoPlayer
               ? styles.expandedVideoPlayer + " " + styles.videoWrapper
@@ -69,19 +69,19 @@ export default function PreviewVideo({ width }) {
             height="100%"
             url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
           />
-        </div>
+        </motion.div>
 
-        <div
+        <motion.div
           className={
             videoPlayer
               ? styles.expandedTextWrapper + " " + styles.textWrapper
               : styles.textWrapper
           }
         >
-          <p className={styles.videoText + " font-zygoregular"}>
+          <motion.p className={styles.videoText + " font-zygoregular"}>
             Check out our latest work out session for body building
-          </p>
-          <p
+          </motion.p>
+          <motion.p
             className={
               videoPlayer
                 ? styles.expandedHighlightText +
@@ -92,8 +92,8 @@ export default function PreviewVideo({ width }) {
             }
           >
             See Our Videos
-          </p>
-        </div>
+          </motion.p>
+        </motion.div>
       </motion.div>
     </motion.div>
   );
