@@ -1,6 +1,7 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
 body {
   background: #000;
 }
@@ -124,6 +125,33 @@ li {
   cursor: pointer;
 }
 
+.rightArrowIcon {
+  padding: 5px;
+}
+.crescentMoonContainer {
+  box-shadow: 5px 0px 3px 2px white;
+  border-radius: 100%;
+  width: 45px;
+  height: 45px;
+  padding: 5px;
+  margin-left: 10px;
+  transition: 0.5s all;
+}
+
+.crescentMoonContainer:hover {
+  box-shadow: 5px 0px 11px 2px white;
+}
+.rightArrowContainer {
+  display: flex;
+  color: white;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 20px;
+  justify-content: end;
+  margin-top: 30px;
+  margin-right: 20px;
+}
+
 .font-zygoregular {
   font-family: "zygoregular";
   letter-spacing: 2px;
@@ -147,6 +175,7 @@ li {
 .inspirationalText {
   font-size: 18px;
   width: 399px;
+  text-align: end;
   margin-left: auto;
 }
 
@@ -172,6 +201,7 @@ li {
   width: 50%;
   object-fit: cover;
 }
+
 
 @media only screen and (max-width: 1140px) {
   .fitnessText {
@@ -224,8 +254,8 @@ li {
 }
 
 @media only screen and (max-width: 550px) {
-  .initTransitionText{
-    font-size:28px;
+  .initTransitionText {
+    font-size: 28px;
     line-height: 1.5rem;
   }
   .LWFitnessText {
@@ -260,18 +290,32 @@ li {
 }
 
 @media only screen and (max-width: 400px) {
+  .headerContentContainer {
+    margin-left: unset;
+    margin-right: unset;
+    width: 90%;
+  }
+  .headerTextContainer {
+    margin-top: -33px;
+  }
   .headerImage {
     margin-left: unset;
   }
   .fitnessText {
     font-size: 50px;
+    text-align: left;
   }
   .menuButton {
     top: 19px;
-    right: 50px;
+    right: 55px;
   }
   .inspirationalText {
     max-width: unset;
-    width: 90%;
+    width: 95%;
+    margin-top: 20px;
+    text-align: center;
+  }
+  nav {
+    width: 35%;
   }
 }
