@@ -64,10 +64,10 @@ export default function PreviewVideo({ width }) {
           onClick={() => setVideoPlayer(true)}
         >
           <ReactPlayer
-            light
             width="100%"
             height="100%"
             url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+            style={videoPlayer ? "" : { pointerEvents: "none" }}
           />
         </motion.div>
 

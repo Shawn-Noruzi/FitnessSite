@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu } from "./Menu";
 import Link from "next/link";
 import useWindowDimensions from "./../utility/useWindowDimensions";
@@ -14,8 +14,16 @@ const Layout = ({ children }) => {
 
 const Header = () => {
   const { width, height } = useWindowDimensions();
+  const [ menuOpen, setMenuOpen ] = useState(false);
+
   return (
-    <header className="text-gray-700 body-font">
+    <header
+      className={
+        menuOpen
+          ? "text-gray-700 body-font stickyNav openMenu"
+          : "text-gray-700 body-font stickyNav"
+      }
+    >
       <div className="navbar">
         <Link href="/">
           <div className="flex lwContainer">
@@ -37,7 +45,7 @@ const Header = () => {
           </div>
         ) : null}
 
-        <Menu />
+        <Menu setMenuOpen={setMenuOpen} />
       </div>
     </header>
   );

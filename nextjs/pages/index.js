@@ -6,7 +6,10 @@ import useWindowDimensions from "./../utility/useWindowDimensions";
 
 const content = (isFirstMount) => ({
   animate: {
-    transition: { staggerChildren: 0.8, delayChildren: isFirstMount ? 2.8 : 0 },
+    transition: {
+      staggerChildren: 0.8,
+      delayChildren: isFirstMount ? 2.8 : 0.5,
+    },
   },
 });
 
@@ -15,7 +18,7 @@ const headerText = (isFirstMount) => ({
   show: {
     opacity: 1,
     transition: {
-      delayChildren: isFirstMount ? 2.9 : 0,
+      delayChildren: isFirstMount ? 2.9 : 1,
       staggerDirection: -1,
     },
   },
@@ -24,6 +27,18 @@ const headerText = (isFirstMount) => ({
 const fitnessText = {
   hidden: { opacity: 0 },
   show: { opacity: 1 },
+};
+
+const headerImage = {
+  initial: { y: -20, opacity: 0 },
+  animate: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.4,
+      ease: [0.6, -0.05, 0.01, 0.99],
+    },
+  },
 };
 
 export default function IndexPage({ isFirstMount }) {
@@ -38,7 +53,8 @@ export default function IndexPage({ isFirstMount }) {
         variants={content(isFirstMount)}
         className=" flex flex-column justify-center containerHeader"
       >
-        <img
+        <motion.img
+          variants={headerImage}
           alt="muscular man"
           src="/images/muscular-man.jpg"
           className="headerImage"
