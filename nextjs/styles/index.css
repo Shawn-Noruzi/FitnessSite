@@ -236,6 +236,7 @@ li {
     height: 72vh;
     margin-left: -20%;
     opacity: 0.75;
+    z-index: -1;
   }
   .headerContentContainer {
     margin-left: auto;
