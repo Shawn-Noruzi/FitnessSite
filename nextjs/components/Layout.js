@@ -14,8 +14,21 @@ const Layout = ({ children }) => {
 
 const Header = () => {
   const { width, height } = useWindowDimensions();
-  const [ menuOpen, setMenuOpen ] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
 
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground, true);
+    return () => window.removeEventListener("scroll", changeBackground);
+  }, []);
   return (
     <header
       className={
@@ -24,7 +37,7 @@ const Header = () => {
           : "text-gray-700 body-font stickyNav"
       }
     >
-      <div className="navbar">
+      <div className={navbar ? "navbar scrolledNavbar" : "navbar"}>
         <Link href="/">
           <div className="flex lwContainer">
             <img className="logo" src="/images/Logo.webp" />

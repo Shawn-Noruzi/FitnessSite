@@ -16,25 +16,25 @@ export default function PreviewVideo({ width }) {
       <motion.div className={styles.socialMediaContainer}>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.instagram.com"
+          href="https://www.instagram.com"
         >
           IN
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.facebook.com"
+          href="https://www.facebook.com"
         >
           FB
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.twitter.com"
+          href="https://www.twitter.com"
         >
           TW
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.instagram.com"
+          href="https://www.instagram.com"
         >
           TT
         </a>

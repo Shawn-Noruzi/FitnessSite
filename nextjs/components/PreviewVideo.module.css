@@ -1,5 +1,5 @@
 .socialContainer {
-  margin-bottom: 20px;
+  margin-bottom: 120px;
   margin-top: 20px;
   margin-left: 10%;
   margin-right: 10%;
@@ -80,6 +80,7 @@
 .expandedHighlightText {
   bottom: unset;
   position: unset;
+  margin-bottom: 80px;
 }
 
 @media only screen and (max-width: 960px) {
