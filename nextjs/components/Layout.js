@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Menu } from "./Menu";
 import Link from "next/link";
 import useWindowDimensions from "./../utility/useWindowDimensions";
@@ -14,9 +14,30 @@ const Layout = ({ children }) => {
 
 const Header = () => {
   const { width, height } = useWindowDimensions();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [navbar, setNavbar] = useState(false);
+
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", changeBackground, true);
+    return () => window.removeEventListener("scroll", changeBackground);
+  }, []);
   return (
-    <header className="text-gray-700 body-font">
-      <div className="navbar">
+    <header
+      className={
+        menuOpen
+          ? "text-gray-700 body-font stickyNav openMenu"
+          : "text-gray-700 body-font stickyNav"
+      }
+    >
+      <div className={navbar ? "navbar scrolledNavbar" : "navbar"}>
         <Link href="/">
           <div className="flex lwContainer">
             <img className="logo" src="/images/Logo.webp" />
@@ -37,7 +58,7 @@ const Header = () => {
           </div>
         ) : null}
 
-        <Menu />
+        <Menu setMenuOpen={setMenuOpen} />
       </div>
     </header>
   );

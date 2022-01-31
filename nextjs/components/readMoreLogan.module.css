@@ -1,0 +1,73 @@
+.cardsContainer {
+  display: flex;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.container {
+  padding-top: 180px;
+  padding-bottom: 180px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.card {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.822);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  box-shadow: 5px 6px 8px -4px rgb(252 252 252);
+  transition: 0.3s all;
+}
+.card:hover {
+  box-shadow: 8px 8px 8px -4px rgb(252 252 252);
+}
+
+.cardTitle {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.cardText {
+  color: white;
+  font-family: "zygoregular";
+  font-size: "16px;";
+}
+.readLink {
+  color: white;
+  font-family: "zygoregular";
+  font-size: "16px;";
+  text-decoration: underline;
+  margin-top: 20px;
+}
+
+.servicesTitle {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.icon {
+  width: 50%;
+  max-width: 460px;
+  height: 460px;
+  object-fit: cover;
+}
+
+.iconDiv {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  justify-content: center;
+  width: 40%;
+}
+.image {
+  display: flex;
+  justify-content: space-between;
+}
+
+/*  */

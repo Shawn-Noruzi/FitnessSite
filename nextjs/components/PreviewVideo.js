@@ -16,25 +16,25 @@ export default function PreviewVideo({ width }) {
       <motion.div className={styles.socialMediaContainer}>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.instagram.com"
+          href="https://www.instagram.com"
         >
           IN
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.facebook.com"
+          href="https://www.facebook.com"
         >
           FB
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.twitter.com"
+          href="https://www.twitter.com"
         >
           TW
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="www.instagram.com"
+          href="https://www.instagram.com"
         >
           TT
         </a>
@@ -64,10 +64,10 @@ export default function PreviewVideo({ width }) {
           onClick={() => setVideoPlayer(true)}
         >
           <ReactPlayer
-            light
             width="100%"
             height="100%"
             url="https://www.youtube.com/watch?v=ysz5S6PUM-U"
+            style={videoPlayer ? "" : { pointerEvents: "none" }}
           />
         </motion.div>
 

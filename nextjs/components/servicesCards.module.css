@@ -1,0 +1,72 @@
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+}
+.container {
+  padding-top: 180px;
+  padding-bottom: 180px;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.card {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.822);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  box-shadow: 5px 6px 8px -4px rgb(252 252 252);
+  transition: 0.3s all;
+}
+.card:hover {
+  box-shadow: 8px 8px 8px -4px rgb(252 252 252);
+}
+
+.cardTitle {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.cardText {
+  color: white;
+  font-family: "zygoregular";
+  font-size: "16px;";
+}
+
+.servicesTitle {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  filter: invert(1);
+}
+
+.iconDiv {
+  display: flex;
+  margin-bottom: 10px;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    padding: 19px;
+    margin: 8px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .cardsContainer {
+    flex-direction: column;
+  }
+  .card:hover {
+    width: 100%;
+  }
+}
