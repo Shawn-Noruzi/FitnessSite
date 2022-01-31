@@ -1,5 +1,5 @@
 import { Parallax } from "react-parallax";
-import styles from "./ParallaxImage.module.css";
+import styles from "./parallaxImage.module.css";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
