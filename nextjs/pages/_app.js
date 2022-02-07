@@ -2,6 +2,7 @@ import React, {useState, useEffect} from "react";
 import { AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout";
 import "../styles/index.css";
+import "react-image-gallery/styles/css/image-gallery.css";
 
 function MyApp({ Component, pageProps, router }) {
   const [isFirstMount, setIsFirstMount] = useState(true);

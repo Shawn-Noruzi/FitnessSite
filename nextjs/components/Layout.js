@@ -65,9 +65,9 @@ const Header = () => {
 };
 
 const Footer = () => (
-  <footer className="text-gray-700 body-font">
+  <footer className="text-gray-700 body-font ">
     <div className="bg-gray-200">
-      <div className="container flex flex-col flex-wrap px-5 py-4 mx-auto sm:flex-row">
+      <div className="container flex flex-col flex-wrap  py-4  sm:flex-row footerBg">
         <p className="text-sm text-center text-gray-500 sm:text-left">
           © 2021 Noruzi —
           <a
