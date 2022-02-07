@@ -68,7 +68,13 @@ const link = {
     },
   },
 };
-const AboutMe = ({ isFirstMount, aboutTitle, aboutText, button, imageHeader }) => {
+const AboutMe = ({
+  isFirstMount,
+  aboutTitle,
+  aboutText,
+  button,
+  imageHeader,
+}) => {
   return (
     <motion.div
       initial="hidden"
