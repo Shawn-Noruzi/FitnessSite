@@ -1,4 +1,4 @@
-import styles from "./specialtyAreas.module.css";
+import styles from "./WorkOutVideos.module.css";
 import { motion } from "framer-motion";
 import { useAnimation } from "framer-motion";
 import { useEffect } from "react";

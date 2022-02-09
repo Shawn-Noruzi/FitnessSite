@@ -3,7 +3,7 @@ import { AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout";
 import "../styles/index.css";
 import "react-image-gallery/styles/css/image-gallery.css";
-
+import 'react-multi-carousel/lib/styles.css';
 function MyApp({ Component, pageProps, router }) {
   const [isFirstMount, setIsFirstMount] = useState(true);
 

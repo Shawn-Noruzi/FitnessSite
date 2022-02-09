@@ -22,6 +22,26 @@
   transition: 0.3s all;
   position: relative;
 }
+
+.cardService {
+  width: 40%;
+  border: 1px solid rgba(255, 255, 255, 0.822);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  box-shadow: 5px 6px 8px -4px rgb(252 252 252);
+  transition: 0.3s all;
+  position: relative;
+}
+
+.cardService:hover {
+  box-shadow: 8px 8px 8px -4px rgb(252 252 252);
+}
+
 .card:hover {
   box-shadow: 8px 8px 8px -4px rgb(252 252 252);
 }
@@ -34,9 +54,23 @@
   margin-left: 10px;
   letter-spacing: 1.4px;
 }
+.cardTextService{
+  white-space: pre-line;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+}
 
-.noMarginLeft{
-  margin-left:unset;
+.cardTitleService {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  letter-spacing: 1.4px;
+  height: 50px;
+}
+.noMarginLeft {
+  margin-left: unset;
 }
 
 .cardText {
@@ -45,10 +79,16 @@
   font-size: 18px;
 }
 
-.marginBottom{
-  margin-bottom:70px;
+.marginBottom {
+  margin-bottom: 70px;
+}
+.marginService {
+  margin-bottom: 90px;
 }
 
+.programsContainer {
+  flex-wrap: wrap;
+}
 .readLink {
   color: white;
   font-family: "zygoregular";
@@ -61,7 +101,7 @@
   transition: 0.3s all;
   position: absolute;
   bottom: 20px;
-  left:28px;
+  left: 19px;
 }
 
 .readLink:hover {
@@ -109,5 +149,21 @@
   }
   .card:hover {
     width: 100%;
+  }
+  .card {
+    margin-left: unset;
+  }
+  .cardService {
+    margin-left: unset;
+    width: 100%;
+  }
+  .cardTitleService {
+    height: unset;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .cardTitleService {
+    font-size: 20px;
   }
 }

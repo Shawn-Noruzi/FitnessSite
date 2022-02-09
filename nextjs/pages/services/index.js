@@ -140,6 +140,7 @@ const AboutPage = ({ isFirstMount }) => {
         imageHeader={aboutMe.imageHeader}
         isFirstMount={isFirstMount}
       />
+      <ServicesCards programs />
     </motion.section>
   );
 };

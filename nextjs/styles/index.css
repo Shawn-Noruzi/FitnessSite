@@ -10,15 +10,81 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 17%;
+  width: 25%;
 }
 
+.carousel-container {
+  padding-top: 50px;
+}
+.custom-left-arrow {
+  position: absolute;
+  top: 0px;
+  right: 95px;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  background: #ffffff00;
+  transition: 0.3s all;
+}
+.custom-left-arrow:hover .arrow {
+  filter: unset;
+}
+.custom-right-arrow {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  background: #ffffff00;
+  transition: 0.3s all;
+}
+
+.arrow {
+  width: 20px;
+  filter: invert(1);
+}
+
+.reverseArrow {
+  width: 20px;
+  filter: invert(1);
+  transform: rotate(180deg);
+}
+
+.custom-left-arrow:hover {
+  background: white;
+}
+.custom-right-arrow:hover {
+  background: white;
+}
+.custom-right-arrow:hover .reverseArrow {
+  color: black;
+
+  filter: unset;
+}
+.padding{
+  padding: 20px;
+  height: fit-content;
+}
+
+.carousel-item-padding-40-px {
+  padding: 20px 20px 20px 20px;
+  border: 2px solid white;
+  height: fit-content;
+}
 .iframeVideo {
   width: 100%;
-  height: 600px;
+  max-height: calc(100vh - 80px);
+  height: 100vh;
 }
 .videoGallery {
   width: 100%;
+}
+
+.image-gallery-icon {
+  z-index: 0 !important;
 }
 .play-button {
   cursor: pointer;
@@ -72,7 +138,10 @@ nav {
   border-radius: 5px;
   width: inherit;
   height: 40px;
-  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   flex: 1 1;
   color: white;
@@ -332,7 +401,7 @@ li {
     font-size: 2rem;
   }
   nav {
-    width: 30%;
+    width: 40%;
   }
   .headerImage {
     position: absolute;
@@ -423,6 +492,6 @@ li {
     text-align: center;
   }
   nav {
-    width: 35%;
+    width: 40%;
   }
 }

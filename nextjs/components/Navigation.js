@@ -42,5 +42,6 @@ const itemIds = [
   { linkName: "HOME", href: "/", number: 0 },
   { linkName: "ABOUT", href: "/about", number: 1 },
   { linkName: "SERVICES", href: "/services", number: 2 },
-  { linkName: "CONTACT", href: "/contact", number: 3 },
+  { linkName: "TESTIMONIALS", href: "/testimonials", number: 3 },
+  { linkName: "CONTACT", href: "/contact", number: 4 },
 ];
