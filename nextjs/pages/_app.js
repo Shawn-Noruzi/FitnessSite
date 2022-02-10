@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
+import Head from 'next/head';
 import { AnimatePresence } from "framer-motion";
 import Layout from "../components/Layout";
 import "../styles/index.css";
 import "react-image-gallery/styles/css/image-gallery.css";
-import 'react-multi-carousel/lib/styles.css';
+import "react-multi-carousel/lib/styles.css";
 function MyApp({ Component, pageProps, router }) {
   const [isFirstMount, setIsFirstMount] = useState(true);
 
@@ -23,6 +24,9 @@ function MyApp({ Component, pageProps, router }) {
 
   return (
     <Layout>
+      <Head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+      </Head>
       <AnimatePresence exitBeforeEnter>
         <Component
           isFirstMount={isFirstMount}
