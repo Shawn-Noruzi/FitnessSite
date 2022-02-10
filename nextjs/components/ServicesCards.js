@@ -162,7 +162,7 @@ const ServicesCards = ({
               animate={"animate"}
               className={styles.readLink}
             >
-              <Link href="/services/ultimate-transformation">
+              <Link href="/services/in-club-training">
                 <a>Learn More</a>
               </Link>
             </motion.div>
@@ -189,7 +189,7 @@ const ServicesCards = ({
               animate={"animate"}
               className={styles.readLink}
             >
-              <Link href="/services/ultimate-transformation">
+              <Link href="/services/home-training">
                 <a>Learn More</a>
               </Link>
             </motion.div>
@@ -216,7 +216,7 @@ const ServicesCards = ({
               animate={"animate"}
               className={styles.readLink}
             >
-              <Link href="/services/ultimate-transformation">
+              <Link href="/services/virtual-training">
                 <a>Learn More</a>
               </Link>
             </motion.div>

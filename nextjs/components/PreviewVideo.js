@@ -16,28 +16,23 @@ export default function PreviewVideo({ width }) {
       <motion.div className={styles.socialMediaContainer}>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="https://www.instagram.com"
+          href="https://www.instagram.com/loganwongfitness/"
         >
           IN
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="https://www.facebook.com"
+          href="https://www.facebook.com/Logan-Wong-104860997868823/?view_public_for=104860997868823"
         >
           FB
         </a>
         <a
           className={styles.socialHeader + " font-zygoregular"}
-          href="https://www.twitter.com"
+          href="https://www.linkedin.com/in/logan-wong/"
         >
-          TW
+          LI
         </a>
-        <a
-          className={styles.socialHeader + " font-zygoregular"}
-          href="https://www.instagram.com"
-        >
-          TT
-        </a>
+
         {videoPlayer && width > 960 ? (
           <button
             className={styles.closeButton}
