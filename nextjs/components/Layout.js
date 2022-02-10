@@ -69,14 +69,13 @@ const Footer = () => (
     <div className="bg-gray-200">
       <div className="container flex flex-col flex-wrap  py-4  sm:flex-row footerBg">
         <p className="text-sm text-center text-gray-500 sm:text-left">
-          © 2021 Noruzi —
           <a
-            href="https://www.noruzi.ca"
+            href="https://www.linkedin.com/in/shawn-noruzi/"
             rel="noopener noreferrer"
             className="ml-1 text-gray-600"
             target="_blank"
           >
-            @Shawnoruzi
+            © Made With &#10084; Noruzi 2021
           </a>
         </p>
         <span className="inline-flex justify-center mt-2 sm:ml-auto sm:mt-0 sm:justify-start footerIcons">
