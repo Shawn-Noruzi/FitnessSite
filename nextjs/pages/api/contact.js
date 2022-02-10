@@ -7,21 +7,21 @@ export default function (req, res) {
     host: "smtp.gmail.com",
     auth: {
       user: "loganwongclub16@gmail.com",
-      pass: process.env.password,
+      pass: "LoganWongGlenEagle007",
     },
     secure: true,
   });
   const mailData = {
     from: "loganwongclub16@gmail.com",
-    to: "shawn.noruzi@gmail.com",
+    to: "loganwongclub16@gmail.com",
     subject: `Message From ${req.body.name}`,
-    text: req.body.message + " | Sent from: " + req.body.email,
+    text: req.body.msg + " | Sent from: " + req.body.email,
     html: `<div>${req.body.message}</div><p>Sent from:
       ${req.body.email}</p>`,
   };
   transporter.sendMail(mailData, function (err, info) {
-    if (err) console.log(err);
-    else console.log(info);
+    if (err) console.log("error: ",err);
+    else console.log("error: ", info);
   });
   res.status(200);
 }
