@@ -27,27 +27,27 @@ export default class ImageGalleryComponent extends Component {
 
     this.images = [
       {
-        thumbnail: `/images/loganBalance.webp`,
-        original: `/images/loganBalance.webp`,
+        thumbnail: `/images/videos/video1thumb.png`,
+        original: `/images/videos/video1thumb.png`,
         embedUrl:
-          "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
+          "/images/videos/1stVideo.mp4",
         description: "Squat PR 375lb",
         renderItem: this._renderVideo.bind(this),
       },
 
       {
-        thumbnail: `/images/loganBalance.webp`,
-        original: `/images/loganBalance.webp`,
+        thumbnail: `/images/videos/video1thumb.png`,
+        original: `/images/videos/video1thumb.png`,
         embedUrl:
-          "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
+          "/images/videos/2ndVideo.mp4",
         description: "Bench PR 225lb",
         renderItem: this._renderVideo.bind(this),
       },
       {
-        thumbnail: `/images/loganBalance.webp`,
-        original: `/images/loganBalance.webp`,
+        thumbnail: `/images/videos/video1thumb.png`,
+        original: `/images/videos/video1thumb.png`,
         embedUrl:
-          "https://www.youtube.com/embed/4pSzhZ76GdM?autoplay=1&showinfo=0",
+          "/images/videos/3rdVideo.mp4",
         description: "Deadlift PR 405lb",
         renderItem: this._renderVideo.bind(this),
       },
@@ -177,6 +177,7 @@ export default class ImageGalleryComponent extends Component {
     return (
       <section className="app videoGallery">
         <ImageGallery
+        showThumbnails={false}
           ref={(i) => (this._imageGallery = i)}
           items={this.images}
           onClick={this._onImageClick.bind(this)}

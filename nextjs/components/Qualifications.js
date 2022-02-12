@@ -131,7 +131,7 @@ const Qualifications = () => {
             <p className={styles.cardTitle}>EDUCATION</p>
           </div>
 
-          <p className={styles.cardText}>Sport Science Diploma</p>
+          <p className={styles.cardText}>UFV Bachelors in Kinesiology</p>
         </motion.div>
         <motion.div
           variants={card2}

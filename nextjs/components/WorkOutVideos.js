@@ -4,7 +4,7 @@ import { useAnimation } from "framer-motion";
 import { useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 import ImageGalleryComponent from "./ImageGalleryComponent";
-import Link from "next/link";
+
 
 const cardsShowStaggered = {
   hidden: { opacity: 0 },

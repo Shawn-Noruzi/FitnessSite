@@ -168,11 +168,11 @@ const ContactPage = () => {
               </button>
             </div>
             <div className="w-full p-2 pt-8 mt-8 text-center border-t border-gray-200">
-              <a className="text-red-500">logan@email.com</a>
+              <a href="mailto:loganwongfitness@gmail.com" className="text-red-500">loganwongfitness@gmail.com</a>
               <p className="my-5 leading-normal">
-                49 Smith St.
+              2635 Barnet Hwy, 
                 <br />
-                Saint Cloud, MN 56301
+                Coquitlam, BC V3E 1K9
               </p>
             </div>
           </div>
