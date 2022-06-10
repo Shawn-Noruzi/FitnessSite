@@ -1,0 +1,82 @@
+.cardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.container {
+  padding-top: 100px;
+  padding-bottom: 100px;
+  padding-left: 2%;
+  padding-right: 2%;
+  display: block;
+}
+.card {
+  width: 30%;
+  border: 1px solid rgba(255, 255, 255, 0.822);
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  margin: 20px;
+  box-shadow: 5px 6px 8px -4px rgb(252 252 252);
+  transition: 0.3s all;
+}
+.card:hover {
+  box-shadow: 8px 8px 8px -4px rgb(252 252 252);
+}
+
+.cardTitle {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 10px;
+  letter-spacing: 1.4px;
+}
+
+.cardText {
+  text-align: center;
+  padding-top: 20px;
+  color: white;
+  font-family: sans-serif;
+  font-size: 18px;
+}
+
+.servicesTitle {
+  font-family: "zygoregular";
+  color: white;
+  font-size: 60px;
+  margin-bottom: 80px;
+  text-align: center;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  filter: invert(1);
+}
+
+.iconDiv {
+  display: flex;
+  margin-bottom: 10px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1200px) {
+  .card {
+    padding: 19px;
+    margin: 8px;
+    width: 45%;
+  }
+  .servicesTitle {
+    font-size: 32px;
+  }
+}
+@media only screen and (max-width: 960px) {
+  .card {
+    width: 350px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}

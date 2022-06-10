@@ -10,9 +10,116 @@ nav {
   top: 0;
   right: 0;
   bottom: 0;
-  width: 17%;
+  width: 25%;
 }
 
+.carousel-container {
+  padding-top: 50px;
+}
+.custom-left-arrow {
+  position: absolute;
+  top: 0px;
+  right: 95px;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  background: #ffffff00;
+  transition: 0.3s all;
+}
+.custom-left-arrow:hover .arrow {
+  filter: unset;
+}
+.custom-right-arrow {
+  position: absolute;
+  top: 0px;
+  right: 25px;
+  padding: 15px;
+  border: 2px solid white;
+  border-radius: 20px;
+  color: white;
+  background: #ffffff00;
+  transition: 0.3s all;
+}
+
+.arrow {
+  width: 20px;
+  filter: invert(1);
+}
+
+.reverseArrow {
+  width: 20px;
+  filter: invert(1);
+  transform: rotate(180deg);
+}
+
+.custom-left-arrow:hover {
+  background: white;
+}
+.custom-right-arrow:hover {
+  background: white;
+}
+.custom-right-arrow:hover .reverseArrow {
+  color: black;
+
+  filter: unset;
+}
+.padding {
+  padding: 20px;
+  height: fit-content;
+}
+
+.carousel-item-padding-40-px {
+  padding: 20px 20px 20px 20px;
+  border: 2px solid white;
+  height: fit-content;
+}
+.iframeVideo {
+  width: 100%;
+  max-height: calc(100vh - 80px);
+  height: 100vh;
+}
+.videoGallery {
+  width: 100%;
+}
+
+.image-gallery-icon {
+  z-index: 0 !important;
+}
+.play-button {
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto;
+  height: 60px;
+  width: 100px;
+  background-color: rgba(0, 0, 0, 0.7);
+  border-radius: 5px;
+}
+.play-button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.play-button:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 16.5px;
+  left: 40px;
+  margin: 0 auto;
+  border-style: solid;
+  border-width: 12.5px 0 12.5px 20px;
+  border-color: transparent transparent transparent #fff;
+}
+.footerBg {
+  background: black;
+  width: 100% !important;
+  max-width: 100% !important;
+  padding-left: 10px;
+  padding-right: 10px;
+}
 .background {
   position: absolute;
   z-index: 0;
@@ -31,7 +138,10 @@ nav {
   border-radius: 5px;
   width: inherit;
   height: 40px;
-  padding: 5px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 7px;
+  padding-bottom: 7px;
 
   flex: 1 1;
   color: white;
@@ -132,6 +242,9 @@ li {
 .rightArrowIcon {
   padding: 5px;
 }
+.overflow-hidden{
+  display:none;
+}
 .crescentMoonContainer {
   box-shadow: 5px 0px 3px 2px white;
   border-radius: 100%;
@@ -162,6 +275,12 @@ li {
 }
 /* Fonts */
 
+.footerBg {
+  padding-left: 10%;
+}
+.footerIcons {
+  padding-right: 10%;
+}
 @font-face {
   font-family: "zygoregular";
   src: url("/fonts/zygo-webfont.woff2") format("woff2"),
@@ -190,7 +309,6 @@ li {
 
 .headerTextContainer {
   margin-top: -54px;
-  margin-left: auto;
 }
 
 .silverTextColor {
@@ -241,9 +359,11 @@ li {
   color: white;
 }
 .solutionText {
-  font-size: 16px;
-  font-family: "zygoregular";
+  font-size: 18px;
+  max-width: 1200px;
+  font-family: sans-serif;
   color: white;
+  text-align: initial;
 }
 
 .missionContainer {
@@ -290,7 +410,7 @@ li {
     font-size: 2rem;
   }
   nav {
-    width: 30%;
+    width: 40%;
   }
   .headerImage {
     position: absolute;
@@ -381,6 +501,6 @@ li {
     text-align: center;
   }
   nav {
-    width: 35%;
+    width: 40%;
   }
 }

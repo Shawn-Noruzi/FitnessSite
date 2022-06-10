@@ -107,7 +107,7 @@ const ContactMe = () => {
           animate={cardAnimate}
           className={styles.card}
         >
-          <Link href="https://www.facebook.com" className={styles.iconDiv}>
+          <Link href="https://www.facebook.com/Logan-Wong-104860997868823/?view_public_for=104860997868823" className={styles.iconDiv}>
             <img src="/images/social/fb.png" className={styles.icon} alt="" />
           </Link>
         </motion.div>
@@ -116,7 +116,7 @@ const ContactMe = () => {
           animate={card2Animate}
           className={styles.card}
         >
-          <Link href="https://www.instagram.com" className={styles.iconDiv}>
+          <Link href="https://www.instagram.com/loganwongfitness/" className={styles.iconDiv}>
             <img
               src="/images/social/insta.png"
               className={styles.icon}
@@ -129,7 +129,7 @@ const ContactMe = () => {
           animate={card3Animate}
           className={styles.card}
         >
-          <Link href="https://www.linkedin.com" className={styles.iconDiv}>
+          <Link href="https://www.linkedin.com/in/logan-wong/" className={styles.iconDiv}>
             <img
               src="/images/social/linked.png"
               className={styles.icon}

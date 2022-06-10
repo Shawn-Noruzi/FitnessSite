@@ -7,11 +7,15 @@
     "start": "next start"
   },
   "dependencies": {
+    "dotenv": "^16.0.0",
     "framer-motion": "^2.6.13",
     "next": "latest",
+    "nodemailer": "^6.7.2",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-image-gallery": "^1.2.7",
     "react-intersection-observer": "^8.33.1",
+    "react-multi-carousel": "^2.6.5",
     "react-parallax": "^3.3.0",
     "react-player": "^2.9.0",
     "react-scroll-parallax": "^3.0.2",

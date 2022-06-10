@@ -49,13 +49,13 @@ export const InitialTransition = () => {
 
   return (
     <motion.div
+      id="transitionElement"
       className="absolute z-50 flex items-center justify-center w-full bg-black"
       initial="initial"
       animate="animate"
       variants={blackBox}
-      onAnimationStart={() => document.body.classList.add("overflow-hidden")}
       onAnimationComplete={() =>
-        document.body.classList.remove("overflow-hidden")
+        document.getElementById("transitionElement").classList.add("overflow-hidden")
       }
     >
       <motion.svg

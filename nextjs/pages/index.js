@@ -213,7 +213,7 @@ export default function IndexPage({ isFirstMount }) {
             <motion.div className={"rightArrowContainer"}>
               <motion.div className="font-zygoregular joinText">
                 <Link href="/contact" className="font-zygoregular joinText">
-                  <a>Join Today</a>
+                  <a href="/contact">Join Today</a>
                 </Link>
               </motion.div>
               <motion.div className="crescentMoonContainer">
