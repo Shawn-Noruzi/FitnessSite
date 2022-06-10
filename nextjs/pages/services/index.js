@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import AboutMe from "../../components/AboutMe";
 import ServicesCards from "../../components/ServicesCards";
 import styles from "./services.module.css";
-import Link from "next/link";
+
 const cardsShowStaggered = (isFirstMount) => ({
   animate: {
     transition: {
@@ -33,41 +33,20 @@ const title = {
     },
   },
 };
-const text = {
-  initial: { opacity: 0, translateY: 30 },
-  animate: {
-    opacity: 1,
-    translateY: 0,
-    transition: {
-      duration: 0.5,
-      delay: 0.3,
-    },
-  },
-};
+
 
 const image = {
-  initial: { opacity: 0, translateY: 30 },
+  initial: { opacity: 0, y:-20 },
   animate: {
     opacity: 1,
-    translateY: 0,
+    y: 0,
     transition: {
-      duration: 0.5,
-      delay: 0.1,
+      duration: 0.4,
+      ease: [0.6, -0.05, 0.01, 0.99],
     },
   },
 };
 
-const link = {
-  initial: { opacity: 0, translateY: 30 },
-  animate: {
-    opacity: 1,
-    translateY: 0,
-    transition: {
-      duration: 0.5,
-      delay: 0.5,
-    },
-  },
-};
 const AboutPage = ({ isFirstMount }) => {
   const aboutMe = {
     aboutTitle: `
@@ -76,24 +55,7 @@ const AboutPage = ({ isFirstMount }) => {
     button: `TRANSFORM NOW`,
     imageHeader: "/images/loganWeights.webp",
   };
-  // const [refMission, inViewMission] = useInView();
-  // const solutionContainerAnimation = useAnimation();
 
-  // useEffect(() => {
-  //   if (inViewSolution) {
-  //     console.log("inview sol", inViewSolution);
-  //     solutionContainerAnimation.start("show");
-  //     solutionTitleAnimation.start("animate");
-  //     solutionTextAnimation.start("animate");
-  //   }
-  //   if (!inViewSolution) {
-  //     console.log("inview sol false", inViewSolution);
-
-  //     solutionContainerAnimation.start("hidden");
-  //     solutionTitleAnimation.start("initial");
-  //     solutionTextAnimation.start("initial");
-  //   }
-  // }, [inViewSolution]);
 
   return (
     <motion.section exit={{ opacity: 0 }}>
@@ -103,8 +65,8 @@ const AboutPage = ({ isFirstMount }) => {
         variants={cardsShowStaggered(isFirstMount)}
         className={styles.container}
       >
-        <motion.div className={styles.cardsContainer}>
-          <motion.div className={styles.image}>
+        <div className={styles.cardsContainer}>
+          <div className={styles.image}>
             <motion.div
               initial="hidden"
               animate="show"
@@ -121,15 +83,15 @@ const AboutPage = ({ isFirstMount }) => {
               </motion.p>
             </motion.div>
             <motion.img
-              variants={image}
-              animate={"animate"}
-              initial={"initial"}
+               initial={{ opacity: 0 }}
+                  animate={{ opacity: 1 }}
+                  exit={{ opacity: 0 }}
               src={"/images/plank.webp"}
               className={styles.icon}
               alt="planking logan"
             />
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </motion.div>
       <ServicesCards services />
       <ServicesCards packages />

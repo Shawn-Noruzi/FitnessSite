@@ -61,7 +61,7 @@ export default function PreviewVideo({ width }) {
           <ReactPlayer
             width="100%"
             height="100%"
-            url="https://youtu.be/tjcTPsitkg4"
+            url="https://youtu.be/udt3KdECRF4"
             style={videoPlayer ? "" : { pointerEvents: "none" }}
           />
         </motion.div>
@@ -76,7 +76,7 @@ export default function PreviewVideo({ width }) {
           <motion.p className={styles.videoText + " font-zygoregular"}>
             Check out our latest work out session for body building
           </motion.p>
-          <motion.p
+          {/* <motion.p
             className={
               videoPlayer
                 ? styles.expandedHighlightText +
@@ -87,7 +87,7 @@ export default function PreviewVideo({ width }) {
             }
           >
             See Our Videos
-          </motion.p>
+          </motion.p> */}
         </motion.div>
       </motion.div>
     </motion.div>

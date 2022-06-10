@@ -242,6 +242,9 @@ li {
 .rightArrowIcon {
   padding: 5px;
 }
+.overflow-hidden{
+  display:none;
+}
 .crescentMoonContainer {
   box-shadow: 5px 0px 3px 2px white;
   border-radius: 100%;
